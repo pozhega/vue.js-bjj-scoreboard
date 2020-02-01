@@ -62,13 +62,9 @@
   }
 }
 
-.adv, .fau {
+.fau {
   font-size: 11em;
   padding: 0 .3em;
-}
-
-.adv {
-  color: $adv-c;
 }
 
 .fau {
@@ -81,5 +77,4 @@
   font-size: 14em;
   text-align: center;
   font-family: 'Roboto Mono', monospace;
-
 }

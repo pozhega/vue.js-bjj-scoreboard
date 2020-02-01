@@ -12,20 +12,18 @@ export const store = new Vuex.Store({
     fighter1: {
       score: 0,
       fault: 0,
-      advantage: 0,
       name: '',
 
     },
     fighter2: {
       score: 0,
       fault: 0,
-      advantage: 0,
       name: ''
     },
     chronometer: {
       playing: false,
-      defaultTime: 420,
-      time: 420,
+      defaultTime: 300,
+      time: 300,
       obj: null,
     },
   },
@@ -65,11 +63,9 @@ export const store = new Vuex.Store({
     resetMatch(state) {
       state.fighter1.score = 0;
       state.fighter1.fault = 0;
-      state.fighter1.advantage = 0;
 
       state.fighter2.score = 0;
       state.fighter2.fault = 0;
-      state.fighter2.advantage = 0;
 
       state.chronometer.time = state.chronometer.defaultTime;
       state.chronometer.playing = false;

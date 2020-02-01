@@ -1,8 +1,8 @@
 <template>
       <div class="control-chronometer">
         <div class="min">
-          <div class="btn" @click="changeTo('chronometer', 'time', 60)">+ min</div>
-          <div class="btn" @click="changeTo('chronometer', 'time', -60)">- min</div>
+          <div class="btn" @click="changeTo('chronometer', 'time', 5)">+ 5 sec</div>
+          <div class="btn" @click="changeTo('chronometer', 'time', -5)">- 5 sec</div>
         </div>
         <div class="reset">
           <div class="btn" @click="resetTime">Reset time</div>
