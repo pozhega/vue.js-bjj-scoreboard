@@ -1,4 +1,4 @@
-# vue.js-bjj-scoreboard
+# vue.js-grappling-scoreboard
 
 ## Project setup
 ```
