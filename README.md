@@ -1,5 +1,8 @@
 # vue.js-grappling-scoreboard
 
+## Preview
+Deployed to: http://grappling-scoreboard.s3-website-eu-west-1.amazonaws.com
+
 ## Project setup
 ```
 npm install
