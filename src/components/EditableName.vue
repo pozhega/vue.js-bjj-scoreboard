@@ -1,32 +1,33 @@
 <template>
-<p>
-    <span @click="editing=true" v-show="!editing && value === ''" class="fighter__info">
-      Click to add fighter's name
+  <p>
+    <span @click="editing=true" v-show="!editing && value === ''" :class="editClass">
+      {{ message }}
     </span>
-    <span @click="editing=true" v-show="!editing && value !== ''">
+    <span style="text-transform: uppercase" @click="editing=true" v-show="!editing && value !== ''">
       {{value}}
     </span>
-    <span v-show="editing" >
+    <span v-show="editing">
       <input :value="value"
             @input="$emit('input', $event.target.value)"
             @keydown.enter="editing=false"
             @blur="editing=false"
             type="text" 
-            class="form-control" >
+            class="form-control">
     </span>
-</p>
+  </p>  
 </template>
-
 <script>
-
-export default {
-  name: 'EditableName',
-  props:['value'],
-  data(){
-    return {
-      editing: false,
+  export default {
+    name: 'EditableName',
+    props:['value', 'message', 'editClass'],
+    data(){
+      return {
+        editing: false,
+      }
+    },
+    updated() {
+      const inputForm = document.getElementsByClassName('form-control')[0]
+      if (inputForm) inputForm.focus()
     }
-  }
-
-};
+  };
 </script>

@@ -13,25 +13,38 @@
 
 .fighter {
   display: grid;
-  grid-template-rows: 20% auto;
+  grid-template-rows: 13% auto;
 
   .fighter-name {
     font-size: 6em;
     text-align: center;
   }
+
+  .fighter-team {
+    font-size: 4em;
+    text-align: center;
+  }
+
   input {
     font-size: 1em;
     text-align: center;
   }
+
   .fighter-points {
     place-self: center;
-    font-size: 42.2em;
-    line-height: 1em;
-  }  
+    font-size: 38em;
+    line-height: 0.65em;
+  }
 }
 
-.fighter__info {
-  font-size: 14px;
+.fighter__name {
+  font-size: 10px;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.fighter__team {
+  font-size: 10px;
   color: #aaa;
   cursor: pointer;
 }
@@ -53,6 +66,7 @@
   grid-template-columns: auto auto;
   align-items: center;
   text-align: center;
+
   &1 {
     background-color: $fighter1-c-b;
   }

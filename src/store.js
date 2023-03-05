@@ -6,6 +6,8 @@ import Vuex from 'vuex';
 
 Vue.use(Vuex);
 
+const uri = window.location.search.substring(1);
+const params = new URLSearchParams(uri);
 
 export const store = new Vuex.Store({
   state: {
@@ -13,17 +15,19 @@ export const store = new Vuex.Store({
       score: 0,
       fault: 0,
       name: '',
+      team: '',
 
     },
     fighter2: {
       score: 0,
       fault: 0,
-      name: ''
+      name: '',
+      team: ''
     },
     chronometer: {
       playing: false,
-      defaultTime: 300,
-      time: 300,
+      defaultTime: parseInt(params.get("defaultTime") || 300),
+      time: parseInt(params.get("defaultTime") || 300),
       obj: null,
     },
   },
@@ -61,24 +65,32 @@ export const store = new Vuex.Store({
       }
     },
     resetMatch(state) {
-      state.fighter1.score = 0;
-      state.fighter1.fault = 0;
+      if (confirm("Are you sure?")) {
+        state.fighter1.name = '';
+        state.fighter1.team = '';
+        state.fighter1.score = 0;
+        state.fighter1.fault = 0;
 
-      state.fighter2.score = 0;
-      state.fighter2.fault = 0;
+        state.fighter2.name = '';
+        state.fighter2.team = '';
+        state.fighter2.score = 0;
+        state.fighter2.fault = 0;
 
-      state.chronometer.time = state.chronometer.defaultTime;
-      state.chronometer.playing = false;
+        state.chronometer.time = state.chronometer.defaultTime;
+        state.chronometer.playing = false;
 
 
-      clearInterval(state.chronometer.obj);
+        clearInterval(state.chronometer.obj);
+      }
 
     },
     resetTime(state) {
-      state.chronometer.time = state.chronometer.defaultTime;
+      if (confirm("Are you sure?")) {
+        state.chronometer.time = state.chronometer.defaultTime;
 
-      state.chronometer.playing = false;
-      clearInterval(state.chronometer.obj);
+        state.chronometer.playing = false;
+        clearInterval(state.chronometer.obj);
+      }
     },
     startTime(state) {
       if (state.chronometer.playing == false) {

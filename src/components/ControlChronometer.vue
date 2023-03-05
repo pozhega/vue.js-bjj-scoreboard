@@ -1,16 +1,18 @@
 <template>
       <div class="control-chronometer">
         <div class="min">
-          <div class="btn" @click="changeTo('chronometer', 'time', 5)">+ 5 sec</div>
-          <div class="btn" @click="changeTo('chronometer', 'time', -5)">- 5 sec</div>
-        </div>
-        <div class="reset">
-          <div class="btn" @click="resetTime">Reset time</div>
-          <div class="btn" @click="resetMatch">Reset Match</div>
+          <div class="btn" @click="changeTo('chronometer', 'time', 1)">+ 1 sec</div>
+          <div class="btn" @click="changeTo('chronometer', 'time', -1)">- 1 sec</div>
+          <div class="btn" @click="changeTo('chronometer', 'time', 60)">+ 1 min</div>
+          <div class="btn" @click="changeTo('chronometer', 'time', -60)">- 1 min</div>
         </div>
         <div class="play-pause">
           <div class="btn" @click="startTime">Play</div>
           <div class="btn" @click="startTime">Pause</div>
+        </div>
+        <div class="reset">
+          <div class="btn" @click="resetTime">Reset time</div>
+          <div class="btn" @click="resetMatch">Reset Match</div>
         </div>
       </div>
 </template>

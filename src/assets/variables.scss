@@ -4,7 +4,7 @@ $control-c-b: #CCCCCC;
 $btn-c: #444;
 $btn-c-b: #DDDDDD;
 $btn-c-b__h: #BBBBBB;
-$btn-c-border:  RGBA(200, 200, 200, 1);
+$btn-c-border: RGBA(200, 200, 200, 1);
 
 $fighter1-c-b: rgb(255, 0, 0);
 $fighter1-c-t: rgb(255, 255, 255);
@@ -15,7 +15,8 @@ $fau-c: rgb(255, 255, 255);
 
 $chronometer-h: 140px;
 $chronometer-w: 40%;
-$chronometer-m-l: (100% - $chronometer-w) / 2 ;
+$chronometer-m-l: (
+    100% - $chronometer-w) / 2;
 $chronometer-c-t: #ffffff;
 $chronometer-c-b: #000000;
 $chronometer-p-bot: $control-h;
